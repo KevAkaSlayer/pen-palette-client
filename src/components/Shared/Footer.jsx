@@ -19,13 +19,13 @@ const Footer = () => {
 
 
                     <div className="flex space-x-6">
-                        <a href="https://www.facebook.com/" className="hover:text-gray-400">
+                        <a href="https://www.facebook.com/" target='_blank' className="hover:text-gray-400">
                             <FaFacebookF size={24} /> 
                         </a>
-                        <a href="https://twitter.com/" className="hover:text-gray-400">
+                        <a href="https://twitter.com/" target='_blank' className="hover:text-gray-400">
                             <FaTwitter size={24} /> 
                         </a>
-                        <a href="https://www.instagram.com/" className="hover:text-gray-400">
+                        <a href="https://www.instagram.com/" target='_blank' className="hover:text-gray-400">
                             <FaInstagram size={24} /> 
                         </a>
                     </div>
