@@ -14,6 +14,9 @@ import FeaturedBlog from "../pages/FeaturedBlog";
 import WishList from "../pages/WishList";
 import UpdateBlog from "../pages/UpdateBlog";
 import PrivateRoutes from "./PrivateRoutes";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +34,18 @@ const router = createBrowserRouter([
         {
           path:'/register',
           element: <Register></Register>
+        },
+        {
+          path:'/about',
+          element:<About></About>
+        },
+        {
+          path:'/contact',
+          element:<Contact></Contact>
+        },
+        {
+          path:'/privacy',
+          element:<PrivacyPolicy></PrivacyPolicy>
         },
         {
           path:'/allBlog',

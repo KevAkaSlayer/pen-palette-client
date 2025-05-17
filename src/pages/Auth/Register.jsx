@@ -58,12 +58,8 @@ const Register = () => {
                     photoURL: photo,
                 };
                 updateProfile(auth.currentUser, profile)
-                    .then(() => {
-                        console.log("Profile updated");
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    });
+                    .then(() => console.log("Profile updated"))
+                    .catch((error) => console.log(error));
             })
             .catch((error) => {
                 errorToast(error.message);
@@ -73,8 +69,7 @@ const Register = () => {
     const handleGoogleRegister = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
-                const user = result.user;
-                console.log(user);
+                console.log(result.user);
                 navigate('/');
                 success();
             })
@@ -85,14 +80,14 @@ const Register = () => {
     };
 
     return (
-        <div className="hero lg:h-[90vh] bg-cover bg-center bg-gradient-to-r from-black via-transparent to-black">
+        <div className="hero h-auto lg:h-screen flex items-center justify-center bg-cover bg-center bg-gradient-to-r from-black via-transparent to-black overflow-y-auto lg:overflow-hidden">
             <Helmet>
                 <title>PenPalette | Register</title>
             </Helmet>
-            <div className="hero-content w-full flex-col lg:flex-row-reverse">
+            <div className="hero-content w-full flex-col lg:flex-row-reverse p-6 lg:p-0 h-full lg:max-h-full overflow-visible">
                 <div className="card bg-transparent w-full max-w-lg shrink-0 shadow-2xl backdrop-blur-md bg-opacity-20">
-                    <form onSubmit={handleRegister} className="card-body p-8 space-y-6">
-                        <h1 className="text-5xl font-extrabold text-black mb-4">Register</h1>
+                    <form onSubmit={handleRegister} className="card-body p-8 space-y-2">
+                        <h1 className="text-5xl font-extrabold text-black mb-2">Register</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Name</span>
@@ -152,7 +147,7 @@ const Register = () => {
                             </button>
                         </div>
                     </form>
-                    <div className="flex justify-center items-center mb-5 p-3">
+                    <div className="flex justify-center items-center mb-2 p-3">
                         <button
                             onClick={handleGoogleRegister}
                             className="btn btn-outline text-black p-2 w-full md:w-1/2 bg-transparent border-black hover:bg-white hover:text-black transition-all duration-300"
