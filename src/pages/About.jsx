@@ -74,9 +74,9 @@ const About = () => {
           <h2 className="text-4xl font-bold text-white mb-8">Meet the Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Alex Chen", role: "Founder & CEO", img: "https://i.ibb.co/8LM3xNJj/image.png" },
-              { name: "Sofia Patel", role: "Head of Community", img: "https://i.ibb.co/8LM3xNJj/image.png" },
-              { name: "Ravi Kumar", role: "Lead Developer", img: "https://i.ibb.co/8LM3xNJj/image.png" },
+              { name: "Alex Chen", role: "Founder & CEO", img: "https://i.ibb.co/pjXmWHff/image.png" },
+              { name: "Patel", role: "Head of Community", img: "https://i.ibb.co/b5q53rCv/image.png" },
+              { name: "Ravi Kumar", role: "Lead Developer", img: "https://i.ibb.co/zVNqNfMm/image.png" },
               { name: "Lena Müller", role: "Creative Director", img: "https://i.ibb.co/8LM3xNJj/image.png" },
             ].map((member) => (
               <motion.div
